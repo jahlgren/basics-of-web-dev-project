@@ -1,0 +1,39 @@
+.about-banner {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+.about-banner > * {
+  width: 100%;
+  margin: auto;
+}
+.about-banner > img {
+  height: 24rem;
+  object-fit: cover;
+  object-position: center;
+}
+.about-banner > div {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.stat > h3 {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+.stat > p {
+  margin: 0;
+}
+
+@media (max-width: 800px) {
+  .about-banner {
+    flex-direction: column;
+  }
+  .about-banner > img {
+    height: 20rem;
+  }
+}

@@ -41,7 +41,15 @@ export function servePublicResource(request, response) {
   
     fs.readFile(resourcePath, (err, data) => {
       if(err) {
-        serveInternalServerError(response);
+        if(err.path && !fs.existsSync(err.path)) {
+          response.writeHead(404);
+          response.end("404: The given resource does not exist.");
+        }
+        else {
+          response.writeHead(500);
+          response.end("500: Server error.");
+          console.log("Server error", err);
+        }
       } 
       else {
         response.writeHead(200, {'Content-Type': fileTypeToMimeMap.get(fileExtension)});
