@@ -68,13 +68,13 @@ img {
   max-width: 1000px;
   margin: 0 auto;
 }
-.topbar > div > nav > ul {
+.topbar ul {
   display: flex;
   gap: 1rem;
   list-style: none;
   padding: 0;
 }
-.topbar > div > nav > ul > li {
+.topbar li {
   padding: 0;
 }
 .topbar li a {
@@ -113,8 +113,22 @@ img {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
   main {
     margin: 0;
+  }
+
+  .topbar {
+    height: auto;
+    padding: 1rem;
+  }
+  .topbar > div {
+    flex-direction: column;
+  }
+  .topbar ul {
+    margin-top: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0;
   }
 }
