@@ -53,6 +53,48 @@ img {
   border-radius: 8px;
 }
 
+.topbar {
+  padding: 0 1rem;
+  height: 80px;
+  display: flex;
+  background-color: white;
+}
+.topbar > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.topbar > div > nav > ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+}
+.topbar > div > nav > ul > li {
+  padding: 0;
+}
+.topbar li a {
+  display: block;
+  padding: 0.375rem 0.75rem;
+  font-size: 1.25rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: inherit;
+  border-radius: 999px;
+  transition: color 0.1s;
+}
+.topbar li a:hover {
+  color: rgb(204, 45, 45);
+}
+.topbar li a.active {
+  color: rgb(204, 45, 45);
+  font-weight: 700;
+}
+
 .box {
   margin: 0 auto;
   padding: 2rem;
