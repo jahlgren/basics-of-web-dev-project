@@ -1,0 +1,42 @@
+.welcome-screen {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  /* Unfortunately 100vh does not work as expected on all mobile devices, 
+     therefore we need to use JavaScript to calculate how big 1vh really is. */
+  height: calc(var(--vh, 1vh) * 100);
+  overflow: hidden;
+}
+.welcome-screen > .slideshow::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  display: block;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.7) 60%, rgba(255, 255, 255, 0) 100%);
+}
+.welcome-screen > main {
+  position: relative;
+  margin: auto;
+  width: 90%;
+  max-width: 1300px;
+}
+.welcome-screen > main > h1 {
+  margin-bottom: 2rem;
+  font-size: 3.5rem;
+  max-width: 400px;
+}
+.welcome-screen > main > p {
+  font-size: 1.25rem;
+  font-weight: 600;
+  max-width: 66%;
+}
+@media (min-width: 900px)  {
+  .welcome-screen > main > h1 {
+    max-width: 100%;
+  }
+  .welcome-screen > main > p {
+    font-size: 1.5rem;
+    max-width: 500px;
+  }
+}
