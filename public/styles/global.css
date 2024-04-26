@@ -100,7 +100,69 @@ img {
   padding: 2rem;
   max-width: 1000px;
   background-color: white;
-  border-radius: 8px;
+  border-radius: 4px;
+}
+
+.slideshow {
+  display: flex;
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+.slideshow > * {
+  position: absolute;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  object-position: center;
+  object-fit: cover;
+  opacity: 0;
+  border-radius: 0;
+}
+.slideshow > *:first-child {
+  opacity: 1;
+}
+
+.banner-container {
+  position: relative;
+  display: flex;
+  height: 60vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+.banner-container > .slideshow::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  display: block;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.5) 75%, rgba(255, 255, 255, 0) 100%);
+}
+.banner-pullup {
+  position: relative;
+  margin-top: -40vh;
+}
+
+.footer {
+  z-index: -1;
+  margin-top: -40vh;
+  position: relative;
+  display: flex;
+  height: 60vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+.footer > .slideshow::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  display: block;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.5) 75%, rgba(255, 255, 255, 0.33) 100%);
+}
+.footer > div:last-child {
+  position: relative;
+  margin-inline: auto;
+  margin-top: 48vh;
+  font-weight: 900;
 }
 
 @media (max-width: 900px) {
