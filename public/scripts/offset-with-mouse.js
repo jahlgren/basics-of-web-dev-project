@@ -28,8 +28,8 @@ export default function initOffsetWithMouse(options = {
   }
 
   const onTick = () => {
-    smoothMouseX += (mouseX() - smoothMouseX) * 0.05;
-    smoothMouseY += (mouseY() - smoothMouseY) * 0.05;
+    smoothMouseX += (mouseX() - smoothMouseX) * 0.01;
+    smoothMouseY += (mouseY() - smoothMouseY) * 0.01;
     
     const x =  (smoothMouseX / window.innerWidth - 0.5) * options.offsetAmount;
     const y =  (smoothMouseY / window.innerHeight - 0.5) * options.offsetAmount;
@@ -39,5 +39,5 @@ export default function initOffsetWithMouse(options = {
     }
   }
 
-  setInterval(onTick, (1/30) * 1000);
+  setInterval(onTick, (1/60) * 1000);
 }

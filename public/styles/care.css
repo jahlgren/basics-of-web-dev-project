@@ -1,0 +1,20 @@
+.care-banner {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+.care-banner > * {
+  width: 100%;
+  margin: auto;
+}
+.care-banner > img {
+  height: 20rem;
+  object-fit: cover;
+  object-position: center;
+}
+
+@media (max-width: 800px) {
+  .care-banner{
+    flex-direction: column;
+  }
+}
