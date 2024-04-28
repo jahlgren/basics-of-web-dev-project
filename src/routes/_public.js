@@ -9,7 +9,8 @@ const fileTypeToMimeMap = new Map([
   ['.js', 'text/javascript'],
   ['.png', 'image/png'],
   ['.jpg', 'image/jpeg'],
-  ['.webp', 'image/webp']
+  ['.webp', 'image/webp'],
+  ['.svg', 'image/svg+xml']
 ]);
 
 
